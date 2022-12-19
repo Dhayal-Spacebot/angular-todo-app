@@ -1,0 +1,59 @@
+<section class="heading-section">
+    <h1 class="title is-1 has-text-centered">Todo List</h1>
+</section>
+
+<div class="container">
+    <div class="add-todo-list">
+        <form>
+            <h2 class="title is-5"> New Todo List</h2>
+            <div class="field is-grouped">
+                <p class="control is-expanded">
+                  <input class="input" type="text" placeholder="Add Your Todo Lists Here">
+                </p>
+                <p class="control">
+                  <button class="button alt-gradient-button ">
+                    <fa-icon class="plus-btn" [icon]="faPlus"></fa-icon>
+                    Add
+                  </button>
+                </p>
+              </div>
+        </form>
+    </div>
+</div>
+
+<section class="listbody">
+    <div class="container">
+        <div class="todoslist " *ngFor="let todo of todos">
+            <div class="todo-item " >
+                <fa-icon class="check-icon checkicon " [icon]="faCheck"></fa-icon>
+            </div>
+            <div class="todo-text">{{ todo.text}}</div>
+            <div class="todo-controls-box">
+                <div class="todo-control-button">
+                    <fa-icon class="check-icon" [icon]="faPen"></fa-icon>
+                </div>
+                <div class="todo-control-button is-danger">
+                    <fa-icon class="check-icon " [icon]="faTrash"></fa-icon>
+                </div>
+            </div>
+            
+        </div>
+        <!-- <div class="todoslist">
+            <div class="todo-item">
+                <fa-icon class="check-icon checkicon" [icon]="faCheck"></fa-icon>
+            </div>
+            <div class="todo-text">
+            This is a single line text
+            </div>
+            <div class="todo-controls-box">
+                <div class="todo-control-button">
+                    <fa-icon class="check-icon" [icon]="faPen"></fa-icon>
+                </div>
+                <div class="todo-control-button is-danger">
+                    <fa-icon class="check-icon " [icon]="faTrash"></fa-icon>
+                </div>
+            </div>
+        </div> -->
+
+    </div>
+</section>
