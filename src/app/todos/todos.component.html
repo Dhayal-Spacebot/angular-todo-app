@@ -23,11 +23,11 @@
 
 <section class="listbody">
     <div class="container">
-        <div class="todoslist " *ngFor="let todo of todos">
+        <div class="todoslist" *ngFor="let todo of todos" [class.completed]="todo.completed">
             <div class="todo-item " >
                 <fa-icon class="check-icon checkicon " [icon]="faCheck"></fa-icon>
             </div>
-            <!-- <div class="todo-text">{{ todo.text}}</div> error here -->
+            <div class="todo-text">{{todo.text}}</div>
             <div class="todo-controls-box">
                 <div class="todo-control-button">
                     <fa-icon class="check-icon" [icon]="faPen"></fa-icon>

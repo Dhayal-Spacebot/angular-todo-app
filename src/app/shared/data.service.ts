@@ -1,17 +1,27 @@
 import { Injectable } from '@angular/core';
-import { Todo } from './todo.model';
+import { Todo, todo1 } from './todo.model';
 
 @Injectable({
   providedIn: 'root'
 })
 export class DataService {
 
-  todos: Todo[] = [new Todo('Test 1'),new Todo('Test 2')];
+  todos: any[]=[];
+  
+
 
   constructor() { }
 
   getAllTodos(){
+   let temp= new Todo();
+   temp.text="hello";
+  //  temp.completed=true;
+   this.todos.push(temp);
+   this.todos[0].
+
+    console.log(this.todos);
     return this.todos;
+    
   }
 
   addNewTodo(input: Todo){
