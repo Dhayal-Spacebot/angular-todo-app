@@ -1,19 +1,19 @@
 export class Todo
 {
-    text: string;
-    completed: boolean;
+    // text: string;
+    // completed: boolean;
 
-    constructor(){
-        this.text ='';
-        this.completed = false;
-
+    constructor(public text:string ,
+    public completed: boolean = false)
+    {
+       
     }
 
 }
 
 
-export interface todo1
-{
-    text: string;
-    completed: boolean;
-}
+// export interface todo1
+// {
+//     text: string;
+//     completed: boolean;
+// }

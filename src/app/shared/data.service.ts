@@ -1,31 +1,28 @@
 import { Injectable } from '@angular/core';
-import { Todo, todo1 } from './todo.model';
+import { Todo } from './todo.model';
 
 @Injectable({
   providedIn: 'root'
 })
 export class DataService {
 
-  todos: any[]=[];
-  
-
+  todos: Todo[] = [];
 
   constructor() { }
 
   getAllTodos(){
-   let temp= new Todo();
-   temp.text="hello";
-  //  temp.completed=true;
-   this.todos.push(temp);
-   this.todos[0].
-
-    console.log(this.todos);
+    const list = JSON.parse(localStorage.getItem("todolist") as string) as Todo[];
+    if(list){
+      this.todos = list
+    }
     return this.todos;
     
   }
 
   addNewTodo(input: Todo){
     this.todos.push(input);
+    localStorage.setItem("todolist", JSON.stringify(this.todos))
+    
   }
 
   updateTodo(index: number,updatedText: Todo){

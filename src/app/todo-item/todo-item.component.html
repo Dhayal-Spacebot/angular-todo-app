@@ -1,0 +1,14 @@
+<div class="todoslist" (click)="onTodolistClick()" [class.completed]="todo.completed">
+    <div class="todo-item ">
+        <fa-icon class="check-icon checkicon " [icon]="faCheck"></fa-icon>
+    </div>
+    <div class="todo-text">{{todo.text}}</div>
+    <div class="todo-controls-box" (click)="$event.stopPropagation()">
+        <div class="todo-control-button" (click)="onEditClicked()" >
+            <fa-icon class="check-icon" [icon]="faPen"></fa-icon>
+        </div>
+        <div class="todo-control-button is-danger">
+            <fa-icon class="check-icon " [icon]="faTrash"></fa-icon>
+        </div>
+    </div>
+</div>
