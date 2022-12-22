@@ -45,7 +45,6 @@ export class TodosComponent implements OnInit {
   }
 
   editTodo(todo: Todo){
-
     // const index = this.todos.indexOf(todo);
 
   }

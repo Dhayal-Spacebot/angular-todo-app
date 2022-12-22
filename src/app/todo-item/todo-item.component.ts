@@ -24,7 +24,6 @@ export class TodoItemComponent {
   }
   onEditClicked(){
     this.editClicked.emit();
-
   }
 
 
