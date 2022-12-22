@@ -20,6 +20,7 @@ export class TodosComponent implements OnInit {
 
   constructor(private dataService:DataService){
  }
+
   ngOnInit(): void {
     this.getTodoList();
   }

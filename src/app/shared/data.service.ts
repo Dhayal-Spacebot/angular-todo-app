@@ -16,7 +16,6 @@ export class DataService {
       this.todos = list
     }
     return this.todos;
-    
   }
 
   addNewTodo(input: Todo){
