@@ -26,6 +26,7 @@ export class DataService {
 
   updateTodo(index: number,updatedText: Todo){
     this.todos[index] = updatedText;
+    localStorage.setItem("todolist", JSON.stringify(this.todos))
   }
 
   deleteTodo(index: number){
