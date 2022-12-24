@@ -11,6 +11,8 @@ import { TodoItemComponent } from './todo-item/todo-item.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { EditTodoDialogComponent } from './edit-todo-dialog/edit-todo-dialog.component';
 import {MatDialogModule} from '@angular/material/dialog';
+import { ToolTipDirective } from './shared/tool-tip.directive';
+import { ToolTipSingletonDirective } from './shared/tool-tip-singleton.directive';
 
 
 
@@ -20,7 +22,9 @@ import {MatDialogModule} from '@angular/material/dialog';
     AppComponent,
     TodosComponent,
     TodoItemComponent,
-    EditTodoDialogComponent
+    EditTodoDialogComponent,
+    ToolTipDirective,
+    ToolTipSingletonDirective
   ],
   imports: [
     BrowserModule,

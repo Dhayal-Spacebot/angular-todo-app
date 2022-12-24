@@ -20,16 +20,18 @@ export class DataService {
 
   addNewTodo(input: Todo){
     this.todos.push(input);
-    localStorage.setItem("todolist", JSON.stringify(this.todos))
+    localStorage.setItem("todolist", JSON.stringify(this.todos));
     
   }
 
   updateTodo(index: number,updatedText: Todo){
     this.todos[index] = updatedText;
-    localStorage.setItem("todolist", JSON.stringify(this.todos))
+    localStorage.setItem("todolist", JSON.stringify(this.todos));
   }
 
   deleteTodo(index: number){
     this.todos.splice(index,1);
+    localStorage.setItem("todolist", JSON.stringify(this.todos));
+
   }
 }

@@ -10,7 +10,8 @@
 
     &.completed .todo-text
     {
-        color: #aaa;
+        color: rgb(129, 118, 118);
+        text-decoration: line-through;
     }
     
     
@@ -40,10 +41,10 @@
 
 .todoslist.completed .checkicon
 {
-    background: #DA70D6;
+    background: #5eeb5b;
     opacity: 1;
     color: #333;
-    border-color: #DA70D6;
+    border-color: #5eeb5b;
 }
 
 .todoslist .todo-controls-box

@@ -2,7 +2,7 @@
     <h1 class="title is-1 has-text-centered">Todo List</h1>
 </section>
 
-<div class="container">
+<div class="container add-fixed-scroll">
     <div class="add-todo-list">
         <form #form="ngForm" (ngSubmit)="onFormSubmit(form)">
             <h2 class="title is-5"> New Todo List</h2>
@@ -18,11 +18,11 @@
                     </button>
                 </p>
             </div>
-            <div *ngIf="todoTextField.invalid && showValidationError">
+            
+        </form><div *ngIf="todoTextField.invalid && showValidationError">
                 <p class="help is-danger" *ngIf="todoTextField.errors?.['required']">please enter your Todo list</p>
                 <p class="help is-danger" *ngIf="todoTextField.errors?.['minlength']">please enter your minimum of 3 letters to continue</p>
             </div>
-        </form>
     </div>
 </div>
 
@@ -32,6 +32,7 @@
         *ngFor="let todo of todos" [todo]="todo" 
         (todoClicked)="toggleCompleted(todo)"
         (editClicked)="editTodo(todo)"
+        (deleteClicked)="deleteTodo(todo)"
         ></app-todo-item>
     </div>
 </section>

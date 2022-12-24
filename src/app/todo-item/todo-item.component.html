@@ -3,11 +3,11 @@
         <fa-icon class="check-icon checkicon " [icon]="faCheck"></fa-icon>
     </div>
     <div class="todo-text">{{todo.text}}</div>
-    <div class="todo-controls-box" (click)="$event.stopPropagation()">
-        <div class="todo-control-button" (click)="onEditClicked()" >
+    <div class="todo-controls-box" appToolTipSingleton (click)="$event.stopPropagation()">
+        <div class="todo-control-button" appToolTip="Edit Todo" (click)="onEditClicked()" >
             <fa-icon class="check-icon" [icon]="faPen"></fa-icon>
         </div>
-        <div class="todo-control-button is-danger">
+        <div class="todo-control-button is-danger"  appToolTip="Delete Todo"(click)="onDeleteClicked()">
             <fa-icon class="check-icon " [icon]="faTrash"></fa-icon>
         </div>
     </div>

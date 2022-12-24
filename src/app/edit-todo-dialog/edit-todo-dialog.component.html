@@ -4,8 +4,19 @@
     <form #form="ngForm" (ngSubmit)="onFormSubmit(form)">
         <div class="field">
             <div class="control">
-                <input type="text" class="input" name="text" [ngModel]="todo.text"  placeholder="Edit Todo here..">
+                <input type="text" 
+                       class="input" 
+                       name="text" 
+                       [ngModel]="todo.text" 
+                       #todoTextField = "ngModel"
+                       required minlength="3"
+                     placeholder="Edit Todo here..">
             </div>
+            <div *ngIf="todoTextField.invalid">
+                <p class="help is-danger" *ngIf="todoTextField.errors?.['required']">please enter your Todo list</p>
+                <p class="help is-danger" *ngIf="todoTextField.errors?.['minlength']">please enter your minimum of 3 letters to continue</p>
+            </div>
+
         </div>
 
         <br>
