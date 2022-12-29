@@ -91,6 +91,11 @@
 .todo-controls-box .todo-control-button.is-danger:hover
 {
     color: rgb(155,27,27);
+
+    @media (max-width: 400px){
+        
+        
+    }
 }
 .todo-controls-box .todo-control-button.is-danger:active
 {

@@ -4,11 +4,25 @@
     </div>
     <div class="todo-text">{{todo.text}}</div>
     <div class="todo-controls-box" appToolTipSingleton (click)="$event.stopPropagation()">
-        <div class="todo-control-button" appToolTip="Edit Todo" (click)="onEditClicked()" >
-            <fa-icon class="check-icon" [icon]="faPen"></fa-icon>
+        <div *ngIf="isMobile">
+            <div class="todo-control-button" (click)="onEditClicked()" >
+                <fa-icon class="check-icon" [icon]="faPen"></fa-icon>
+            </div>
+        </div>      
+        <div *ngIf="!isMobile">
+            <div class="todo-control-button" appToolTip="Edit Todo" (click)="onEditClicked()" >
+                <fa-icon class="check-icon" [icon]="faPen"></fa-icon>
+            </div>
+        </div>   
+        <div *ngIf="isMobile">
+            <div class="todo-control-button is-danger" (click)="onDeleteClicked()">
+                <fa-icon class="check-icon" [icon]="faTrash"></fa-icon>
+            </div>
         </div>
-        <div class="todo-control-button is-danger"  appToolTip="Delete Todo"(click)="onDeleteClicked()">
-            <fa-icon class="check-icon " [icon]="faTrash"></fa-icon>
+        <div *ngIf="!isMobile">
+            <div class="todo-control-button is-danger" appToolTip="Delete Todo"   (click)="onDeleteClicked()">
+                <fa-icon class="check-icon" [icon]="faTrash"></fa-icon>
+            </div>
         </div>
     </div>
 </div>
